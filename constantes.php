@@ -1,0 +1,2 @@
+<?php
+$WEBNAME = 'GRUPO BUENOS AIRES';
