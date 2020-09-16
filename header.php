@@ -48,9 +48,12 @@
                         <li>
                             <a href="javascript:;">Nosotros<i class="fa fa-chevron-down"></i></a>
                             <ul class="sub-menu">
-                                <li><a href="#">Misión</a></li>
-                                <li><a href="#">Visión</a></li>
-                                <li><a href="#">Equipo de trabajo</a></li>
+                                <?php
+                                $paginas = mysql_query("SELECT * FROM subpaginas", $conexion);
+                                while ($pag = mysql_fetch_array($paginas)) {
+                                ?>
+                                    <li><a href="#"><?=$pag['sub_nombre'];?></a></li>
+                                <?php } ?>
                             </ul>
                         </li>
 
@@ -59,11 +62,12 @@
                         <li>
                             <a href="javascript:;">Productos<i class="fa fa-chevron-down"></i></a>
                             <ul class="sub-menu">
-                                <li><a href="#">Motores</a></li>
-                                <li><a href="#">Alambres</a></li>
-                                <li><a href="#">Tubeías</a></li>
-                                <li><a href="#">Tornillería</a></li>
-                                <li><a href="#">Suministros</a></li>
+                                <?php
+                                $categorias = mysql_query("SELECT * FROM sub_categorias WHERE scat_opcion=1", $conexion);
+                                while ($cat = mysql_fetch_array($categorias)) {
+                                ?>
+                                    <li><a href="#"><?=$cat['scat_nombre'];?></a></li>
+                                <?php } ?>
                             </ul>
                         </li>
 
