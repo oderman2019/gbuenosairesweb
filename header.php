@@ -49,15 +49,15 @@
                             <a href="javascript:;">Nosotros<i class="fa fa-chevron-down"></i></a>
                             <ul class="sub-menu">
                                 <?php
-                                $paginas = mysql_query("SELECT * FROM subpaginas", $conexion);
+                                $paginas = mysql_query("SELECT * FROM subpaginas WHERE sub_id_pagina=2 AND sub_activa=1 ORDER BY sub_posicion", $conexion);
                                 while ($pag = mysql_fetch_array($paginas)) {
                                 ?>
-                                    <li><a href="#"><?=$pag['sub_nombre'];?></a></li>
+                                    <li><a href="nosotros.php?p=<?=$pag['sub_id'];?>"><?=$pag['sub_nombre'];?></a></li>
                                 <?php } ?>
                             </ul>
                         </li>
 
-                        <li> <a href="#">Servicios</a></li>
+                        <li> <a href="servicios.php">Servicios</a></li>
 
                         <li>
                             <a href="javascript:;">Productos<i class="fa fa-chevron-down"></i></a>
@@ -66,7 +66,7 @@
                                 $categorias = mysql_query("SELECT * FROM sub_categorias WHERE scat_opcion=1", $conexion);
                                 while ($cat = mysql_fetch_array($categorias)) {
                                 ?>
-                                    <li><a href="#"><?=$cat['scat_nombre'];?></a></li>
+                                    <li><a href="productos.php?cat=<?=$cat['scat_id'];?>"><?=$cat['scat_nombre'];?></a></li>
                                 <?php } ?>
                             </ul>
                         </li>
