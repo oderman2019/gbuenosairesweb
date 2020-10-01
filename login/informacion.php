@@ -6,7 +6,7 @@ if($_SESSION["id"]==""){
 	$usuarioActivo = $_SESSION["id"];
 }
 
-require("modelo/conexion.php");
+require("./login/modelo/conexion.php");
 
 $informacionPagina = mysql_fetch_array(mysql_query("SELECT * FROM informacion WHERE info_id=1",$conexion));
 $configuracionPagina = mysql_fetch_array(mysql_query("SELECT * FROM configuracion WHERE conf_id=1",$conexion));

@@ -5,16 +5,16 @@
             <div class="row">
                 <div class="wt-topbar-right clearfix">
                     <ul class="social-bx list-inline pull-right">
-                        <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
-                        <li><a href="javascript:void(0);" class="fa fa-twitter"></a></li>
-                        <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
-                        <li><a href="javascript:void(0);" class="fa fa-rss"></a></li>
-                        <li><a href="javascript:void(0);" class="fa fa-youtube"></a></li>
-                        <li><a href="javascript:void(0);" class="fa fa-instagram"></a></li>
+                        <?php
+                        $redes = mysql_query("SELECT * FROM redes_sociales", $conexion);
+                        while ($red = mysql_fetch_array($redes)) {
+                        ?>
+                            <li><a href="<?=$red['red_url'];?>" class="fa fa-<?=$red['red_nombre'];?>" target="_blank"></a></li>
+                        <?php } ?>
                     </ul>
                     <ul class="list-unstyled e-p-bx pull-right">
-                        <li><i class="fa fa-envelope"></i>info@grupobuenosaires.com</li>
-                        <li><i class="fa fa-phone"></i>667 87 44</li>
+                        <li><i class="fa fa-envelope"></i><?= $informacionPagina['info_email_principal']; ?></li>
+                        <li><i class="fa fa-phone"></i><?= $informacionPagina['info_telefono_principal']; ?></li>
                     </ul>
 
                 </div>
@@ -52,7 +52,7 @@
                                 $paginas = mysql_query("SELECT * FROM subpaginas WHERE sub_id_pagina=2 AND sub_activa=1 ORDER BY sub_posicion", $conexion);
                                 while ($pag = mysql_fetch_array($paginas)) {
                                 ?>
-                                    <li><a href="nosotros.php?p=<?=$pag['sub_id'];?>"><?=$pag['sub_nombre'];?></a></li>
+                                    <li><a href="nosotros.php?p=<?= $pag['sub_id']; ?>"><?= $pag['sub_nombre']; ?></a></li>
                                 <?php } ?>
                             </ul>
                         </li>
@@ -66,13 +66,13 @@
                                 $categorias = mysql_query("SELECT * FROM sub_categorias WHERE scat_opcion=1", $conexion);
                                 while ($cat = mysql_fetch_array($categorias)) {
                                 ?>
-                                    <li><a href="productos.php?cat=<?=$cat['scat_id'];?>"><?=$cat['scat_nombre'];?></a></li>
+                                    <li><a href="productos.php?cat=<?= $cat['scat_id']; ?>"><?= $cat['scat_nombre']; ?></a></li>
                                 <?php } ?>
                             </ul>
                         </li>
 
-                        <li> <a href="#">Portafolio</a></li>
-                        <li> <a href="#">Contáctenos</a></li>
+                        <li> <a href="portafolio.php">Portafolio</a></li>
+                        <li> <a href="contacto.php">Contáctenos</a></li>
 
 
                     </ul>

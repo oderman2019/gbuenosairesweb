@@ -1,7 +1,5 @@
-<?php include("login/modelo/conexion.php"); ?>
-<?php include("constantes.php"); ?>
-
-<?php include("head.php"); ?>
+<?php include("head.php");?> 
+<?php include("constantes.php");?>
 
 <!-- PAGE TITLE HERE -->
 <title> <?= $WEBNAME; ?> | Productos</title>
@@ -120,34 +118,23 @@
                                             <div class="wt-box wt-product-box">
                                                 <div class="wt-thum-bx wt-img-overlay1 wt-img-effect zoom">
                                                     <img src="images/products/pic-1.jpg" alt="">
-                                                    <div class="overlay-bx">
-                                                        <div class="overlay-icon">
-                                                            <a href="javascript:void(0);">
-                                                                <i class="fa fa-cart-plus wt-icon-box-xs"></i>
-                                                            </a>
-                                                            <a class="mfp-link" href="javascript:void(0);">
-                                                                <i class="fa fa-heart wt-icon-box-xs"></i>
-                                                            </a>
-                                                        </div>
-                                                    </div>
+                                                    
                                                 </div>
                                                 <div class="wt-info  text-center">
                                                     <div class="p-a10 bg-white">
                                                         <h4 class="wt-title">
-                                                            <a href="javascript:;"><?=$prod['pro_nombre'];?></a>
+                                                            <a href="productos-detalles.php?id=<?=$prod['pro_id'];?>"><?=$prod['pro_nombre'];?></a>
                                                         </h4>
 
                                                         <span class="price">
-                                                            <del>
-                                                                <span><span class="Price-currencySymbol">£</span>3.00</span>
-                                                            </del>
+
                                                             <ins>
-                                                                <span><span class="Price-currencySymbol">£</span>2.00</span>
+                                                                <span><span class="Price-currencySymbol">$</span><?=number_format($prod['pro_precio'],0,".",".");?></span>
                                                             </ins>
                                                         </span>
 
                                                         <div class="p-t10">
-                                                            <button class="site-button  m-r15" type="button">VER DETALLES <i class="fa fa-angle-double-right"></i></button>
+                                                            <a href="productos-detalles.php?id=<?=$prod['pro_id'];?>" class="site-button  m-r15" type="button">VER DETALLES <i class="fa fa-angle-double-right"></i></a>
                                                         </div>
                                                     </div>
                                                 </div>

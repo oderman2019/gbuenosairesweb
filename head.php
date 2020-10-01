@@ -1,3 +1,4 @@
+<?php include("login/informacion.php");?>
 <!DOCTYPE html>
 
 <html lang="en">

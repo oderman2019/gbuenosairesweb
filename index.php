@@ -1,7 +1,5 @@
-<?php include("login/modelo/conexion.php");?>
+<?php include("head.php");?> 
 <?php include("constantes.php");?>
-
-<?php include("head.php");?>   
 
     <!-- PAGE TITLE HERE -->
     <title> <?=$WEBNAME;?> | Inicio</title>

@@ -1,11 +1,9 @@
-<?php include("login/modelo/conexion.php"); ?>
-<?php include("constantes.php"); ?>
+<?php include("head.php");?> 
+<?php include("constantes.php");?>
 
 <?php
 $pagina = mysql_fetch_array(mysql_query("SELECT * FROM subpaginas WHERE sub_id='".$_GET["p"]."' AND sub_activa=1",$conexion));
-?>
-
-<?php include("head.php");?>   
+?>  
 
     <!-- PAGE TITLE HERE -->
     <title> <?=$WEBNAME;?> | <?=$pagina['sub_nombre'];?></title>

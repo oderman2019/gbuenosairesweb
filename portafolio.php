@@ -1,8 +1,8 @@
-<?php include("head.php");?> 
-<?php include("constantes.php");?>
+<?php include("head.php"); ?>
+<?php include("constantes.php"); ?>
 
 <!-- PAGE TITLE HERE -->
-<title> <?= $WEBNAME; ?> | Servicios</title>
+<title> <?= $WEBNAME; ?> | Portafolio</title>
 
 
 <!-- GOOGLE FONTS -->
@@ -22,14 +22,14 @@
         <!-- HEADER END -->
 
         <!-- CONTENT START -->
-        <div class="page-content  bg-white">
+        <div class="page-content">
 
             <!-- INNER PAGE BANNER -->
-            <div class="wt-bnr-inr overlay-wraper" style="background-image:url(images/banner/services.jpg);">
+            <div class="wt-bnr-inr overlay-wraper" style="background-image:url(images/banner/Portfolio.jpg);">
                 <div class="overlay-main bg-black opacity-07"></div>
                 <div class="container">
                     <div class="wt-bnr-inr-entry">
-                        <h1 class="text-white">Servicios</h1>
+                        <h1 class="text-white">Portfolio 3</h1>
                     </div>
                 </div>
             </div>
@@ -37,59 +37,49 @@
 
 
 
-            <!-- SECTION CONTENT -->
-            <div class="section-full p-t80 p-b50  ">
-                <div class="container">
-                    <!-- TITLE START -->
-                    <div class="section-head text-center">
-                        <h2 class="text-uppercase">Nuestros servicios</h2>
-                        <div class="wt-separator-outer">
-                            <div class="wt-separator style-square">
-                                <span class="separator-left bg-primary"></span>
-                                <span class="separator-right bg-primary"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- TITLE END -->
-                    <div class="section-content">
-                        <div class="row">
+            <!-- SECTION CONTENT START -->
+            <div class="section-full p-t80 p-b50">
 
+                <!-- GELLERY CONTENT -->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="portfolio-wrap mfp-gallery no-col-gap">
 
                             <?php
-                            $servicios = mysql_query("SELECT * FROM subpaginas WHERE sub_id_pagina=3 AND sub_activa=1 ORDER BY sub_posicion", $conexion);
-                            while ($serv = mysql_fetch_array($servicios)) {
+                            $portafolio = mysql_query("SELECT * FROM portafolio", $conexion);
+                            while ($port = mysql_fetch_array($portafolio)) {
                             ?>
-                                <div class="col-md-4 col-sm-4 p-tb15">
-                                    <div class="wt-box bg-white">
-                                        <div class="wt-media">
-                                            <a href="javascript:void(0);"><img src="images/our-work/<?=$serv['sub_imagen'];?>" alt=""></a>
-                                        </div>
-                                        <div class="wt-info p-tb30">
-                                            <h4 class="wt-title m-t0"><a href="javascript:void(0);"><?=$serv['sub_nombre'];?></a></h4>
-                                            <?=$serv['sub_descripcion_corta'];?>
-                                            <a href="javascript:void(0);" class="site-button outline   black"><strong class="text-center">Contactar</strong></a>
+
+                                <!-- COLUMNS 1 -->
+                                <div class="masonry-item cat-1 col-lg-3 col-md-6 col-sm-6">
+                                    <div class="wt-box p-a15">
+                                        <div class="wt-thum-bx wt-img-effect zoom">
+                                            <img src="images/portfolio/<?=$port['por_imagen'];?>" alt="">
+                                            <div class="wt-info-has p-a20 bg-white ">
+                                                <div class="wt-info p-b10">
+                                                    <h4 class="m-a0"><?=$port['por_nombre'];?></h4>
+                                                </div>
+                                                <div class="wt-info-has-text"><?=$port['por_descripcion'];?></div>
+                                                <a href="javascript:void(0);" class="site-button button-sm ">Contactar <i class="fa fa-angle-double-right"></i></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+
                             <?php } ?>
-
-
 
                         </div>
                     </div>
-
                 </div>
+                <!-- GELLERY END -->
+
             </div>
-            <!-- SECTION CONTENT END -->
-
-
+            <!-- SECTION CONTENT END  -->
 
         </div>
         <!-- CONTENT END -->
 
-
         <?php include("footer.php"); ?>
-
 
     </div>
 
@@ -120,15 +110,9 @@
 
 
 
-
-    <?php //include("colores.php");
-    ?>
-
-
-
 </body>
 
 
-<!-- Mirrored from thewebmax.com/build/services-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Sep 2020 22:56:38 GMT -->
+<!-- Mirrored from thewebmax.com/build/portfolio-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Sep 2020 22:55:30 GMT -->
 
 </html>
