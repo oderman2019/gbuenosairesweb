@@ -108,14 +108,14 @@
 											<textarea class="span12 ckeditor m-wrap" name="descripcion" rows="4"><?=$resultado["pro_descripcion"];?></textarea>
 										</div>
 									</div>
-                                    
+                                    <!--
                                     <div class="control-group">
 										<label class="control-label">C&oacute;digo de Video</label>
 										<div class="controls">
 											<input type="text" class="span4 m-wrap" value="<?=$resultado[9];?>" name="video"/>
                                             <img src="../../files/imagenes-generales/CodigoYoutube.png">
 										</div>
-									</div>
+									</div>-->
                                     
                                     <div class="control-group">
 										<label class="control-label">Imagen<br>

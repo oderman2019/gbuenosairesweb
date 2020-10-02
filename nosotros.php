@@ -47,7 +47,7 @@ $pagina = mysql_fetch_array(mysql_query("SELECT * FROM subpaginas WHERE sub_id='
                     <!-- BLOG START -->
                     <div class="blog-post date-style-3 blog-post-single">
                         <div class="wt-post-media wt-img-effect">
-                            <a href="javascript:void(0);"><img src="images/blog/default/<?=$pagina['sub_imagen'];?>" alt=""></a>
+                            <a href="javascript:void(0);"><img src="login/files/bg-paginas/<?=$pagina['sub_imagen'];?>" alt=""></a>
                         </div>
                         <div class="post-description-area p-t30">
                             <div class="wt-post-title ">

@@ -128,69 +128,19 @@
 									</div>
 									
 									<div class="control-group">
-										<label class="control-label">Direcci&oacute;n otra sede</label>
+										<label class="control-label">WhatsApp</label>
 										<div class="controls">
-                                          <input type="text" class="span3" name="dir2" value="<?=$resultado['info_direccion2'];?>" />
+                                          <input type="text" class="span3" name="wp" value="<?=$resultado['info_whatsapp'];?>" />
 										</div>
 									</div>
                                     
                                     
                                     
                                     
-                                    <div class="control-group">
-										<label class="control-label">Logo<br>
-                                        Medidas:(100 x 90) - Peso: (2 MB M&aacute;ximo)</label>
-										<div class="controls">
-											<div class="fileupload fileupload-new" data-provides="fileupload">
-												<div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
-                                                <?php if($resultado["info_logo"]!=""){?>
-                                                <img src="../../files/logo/<?=$resultado["info_logo"]?>" alt="" />
-												<?php }else{?>
-													<img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=Ninguna+imagen" alt="" />
-												<?php }?>
-                                                </div>
-												<div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
-												<div>
-													<span class="btn btn-file"><span class="fileupload-new">Select image</span>
-													<span class="fileupload-exists">Change</span>
-													<input type="file" class="default" name="logo" /></span>
-													<a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
-												</div>
-											</div>
-										</div>
-                                        
-                                        <div class="control-group">
-										<label class="control-label">Tama&ntilde;o del logo</label>
-										<div class="controls">
-                                          Ancho <input type="text" class="span1" name="logoAncho" value="<?=$resultado["info_logo_ancho"];?>" required />Px 
-                                          Alto <input type="text" class="span1" name="logoAlto" value="<?=$resultado["info_logo_alto"];?>" required />Px
-										</div>
-									</div>
-
-
-                                        <div class="control-group">
-                                                <label class="control-label">T&eacute;rminos y condiciones</label>
-                                                <div class="controls">
-                                                   <textarea name="terminos" class="span12"><?=$resultado[7];?></textarea>
-                                                </div>
-										</div>
-                                        
-                                        <div class="control-group">
-                                                <label class="control-label">Protecci&oacute;n de datos</label>
-                                                <div class="controls">
-                                                   <textarea class="span12" name="proteccionDatos" rows="6"><?=$resultado[8];?></textarea>
-                                                </div>
-										</div>
-                                        
-                                        <div class="control-group">
-                                                <label class="control-label">Preguntas frecuentes</label>
-                                                <div class="controls">
-                                                   <textarea class="span12" name="preguntas" rows="6"><?=$resultado[9];?></textarea>
-                                                </div>
-										</div>
+                                   
                                         
                                         
-									</div>
+									
 
 								  <div class="form-actions">
 										<button type="submit" class="btn blue">Guardar</button>

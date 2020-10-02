@@ -54,6 +54,14 @@
 					<span class="selected"></span>
 					</a>
 				</li>
+
+				<li class="start">
+					<a href="subpaginas.php">
+					<i class="icon-book"></i> 
+					<span class="title">Sub paginas</span>
+					<span class="selected"></span>
+					</a>
+				</li>
                  
 
                 <li class="start">
@@ -73,31 +81,22 @@
 				</li>
 				
 				<li class="start">
-					<a href="anuncios.php">
+					<a href="portafolio.php">
 					<i class="icon-file"></i> 
-					<span class="title">Certificados</span>
+					<span class="title">Portafolio</span>
 					<span class="selected"></span>
 					</a>
 				</li>
-                
-                
-                <li class="start">
-					<a href="blog.php">
-					<i class="icon-bullhorn"></i> 
-					<span class="title">Promociones</span>
-					<span class="selected"></span>
-					</a>
-				</li>
-                
-				
 
-                <li class="start">
+
+				<li class="start">
 					<a href="clientes.php">
-					<i class="icon-phone"></i> 
-					<span class="title">Áreas de contacto</span>
+					<i class="icon-user"></i> 
+					<span class="title">Clientes</span>
 					<span class="selected"></span>
 					</a>
 				</li>
+                
 				
 				<li class="start">
 					<a href="redes-sociales.php">

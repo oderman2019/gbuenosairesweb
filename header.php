@@ -6,7 +6,7 @@
                 <div class="wt-topbar-right clearfix">
                     <ul class="social-bx list-inline pull-right">
                         <?php
-                        $redes = mysql_query("SELECT * FROM redes_sociales", $conexion);
+                        $redes = mysql_query("SELECT * FROM redes_sociales WHERE red_url!=''", $conexion);
                         while ($red = mysql_fetch_array($redes)) {
                         ?>
                             <li><a href="<?=$red['red_url'];?>" class="fa fa-<?=$red['red_nombre'];?>" target="_blank"></a></li>
@@ -26,7 +26,7 @@
         <div class="main-bar bg-white">
             <div class="container">
                 <div class="logo-header">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img src="images/logo-dark.png" width="171" height="49" alt="" />
                     </a>
                 </div>

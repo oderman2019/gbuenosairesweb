@@ -72,7 +72,7 @@
 					$visitas=mysql_num_rows(mysql_query("SELECT * FROM visitas",$conexion));
 					?>
 					<div class="row-fluid">
-						
+						<!--
                         <div class="span3 responsive" data-tablet="span6" data-desktop="span3">
 							<div class="dashboard-stat blue">
 								<div class="visual">
@@ -91,7 +91,7 @@
 								</a>                 
 							</div>
 						</div>
-						
+-->
 
 						<div class="span3 responsive" data-tablet="span6" data-desktop="span3">
 							<div class="dashboard-stat yellow">

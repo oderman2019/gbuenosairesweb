@@ -117,7 +117,7 @@
                                         <div class="col-md-4 col-sm-4 col-xs-6 col-xs-100pc m-b30">
                                             <div class="wt-box wt-product-box">
                                                 <div class="wt-thum-bx wt-img-overlay1 wt-img-effect zoom">
-                                                    <img src="images/products/pic-1.jpg" alt="">
+                                                    <img src="login/files/productos/<?=$prod['pro_imagen'];?>" alt="">
                                                     
                                                 </div>
                                                 <div class="wt-info  text-center">

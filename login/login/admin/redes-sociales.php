@@ -74,20 +74,6 @@
 								</div>
 							</div>
 							<div class="portlet-body">
-								<div class="table-toolbar">
-									<div class="btn-group">
-										<a href="redes-sociales-info.php?a=1" class="btn green">Agregar <i class="icon-plus"></i></a>
-									</div>
-									<div class="btn-group pull-right">
-										<button class="btn dropdown-toggle" data-toggle="dropdown">Herramientas <i class="icon-angle-down"></i>
-										</button>
-										<ul class="dropdown-menu pull-right">
-											<li><a href="#">Imprimir</a></li>
-											<li><a href="#">Guardar como PDF</a></li>
-											<li><a href="#">Exportar a Excel</a></li>
-										</ul>
-									</div>
-								</div>
 								<?php
 								$consulta = mysql_query("SELECT red_id, red_nombre, red_icono, red_url FROM redes_sociales;",$conexion);
 								?>

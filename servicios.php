@@ -62,12 +62,12 @@
                                 <div class="col-md-4 col-sm-4 p-tb15">
                                     <div class="wt-box bg-white">
                                         <div class="wt-media">
-                                            <a href="javascript:void(0);"><img src="images/our-work/<?=$serv['sub_imagen'];?>" alt=""></a>
+                                            <a href="javascript:void(0);"><img src="login/files/bg-paginas/<?=$serv['sub_imagen'];?>" alt=""></a>
                                         </div>
                                         <div class="wt-info p-tb30">
                                             <h4 class="wt-title m-t0"><a href="javascript:void(0);"><?=$serv['sub_nombre'];?></a></h4>
                                             <?=$serv['sub_descripcion_corta'];?>
-                                            <a href="javascript:void(0);" class="site-button outline   black"><strong class="text-center">Contactar</strong></a>
+                                            <a href="contacto.php?asunto=Información sobre <?=$serv['sub_nombre'];?>" class="site-button outline   black"><strong class="text-center">Contactar</strong></a>
                                         </div>
                                     </div>
                                 </div>

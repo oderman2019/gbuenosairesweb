@@ -81,7 +81,7 @@
                                                         
 
                                 <div class="gmap-outline m-b30">
-                                    <div id="gmap_canvas" class="google-map"></div>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d824.9998652945565!2d-75.4920696142152!3d10.391137046071893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef625cf42f32913%3A0xe385ad77775fbf9e!2sELECTRICOS%20BUENOS%20AIRES!5e0!3m2!1ses-419!2sco!4v1601640901239!5m2!1ses-419!2sco" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                                 </div>
                                     
                             </div>
@@ -90,6 +90,13 @@
                             <div class="wt-box col-md-6">
                             
                                 <h4 class="text-uppercase">Formulario de contacto</h4>
+
+                                <?php if($_GET["msg"]==1){?>
+                                    <p style="color: navy; font-size:larger;">Su mensaje se ha enviado correctamente.</p>
+                                <?php    
+                                }
+                                ?>
+
                                 <div class="wt-separator-outer m-b30">
                                     <div class="wt-separator style-square">
                                        <span class="separator-left bg-primary"></span>
@@ -99,8 +106,14 @@
                                 </div>
                             
                             	<div class="p-a30 bg-gray">
+
+                                <?php
+                                $asunto = "";
+                                if($_GET["asunto"]!=""){$asunto = $_GET["asunto"];}
+                                ?>
                             
-                                    <form class="cons-contact-form" method="post" action="http://thewebmax.com/build/form-handler.php">
+                                    <form method="post" action="sql.php">
+                                        <input type="hidden" value="1" name="idSQL">
                             
                                         <div class="row">
                                         
@@ -117,7 +130,17 @@
                                                 <div class="form-group">
                                                     <div class="input-group">
                                                         <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                                                        <input name="email" type="text" class="form-control" required placeholder="Email">
+                                                        <input name="email" type="email" class="form-control" required placeholder="Email">
+                                                    </div>
+                                                </div>
+            
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="fa fa-mobile"></i></span>
+                                                        <input name="tel" type="text" class="form-control" required placeholder="Teléfono">
                                                     </div>
                                                 </div>
             
@@ -127,7 +150,7 @@
                                                 <div class="form-group">
                                                     <div class="input-group">
                                                         <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
-                                                        <input name="asunto" type="text" required class="form-control" placeholder="Asunto">
+                                                        <input name="asunto" type="text" required class="form-control" value="<?=$asunto;?>" placeholder="Asunto">
                                                     </div>
                                                 </div>
                                             </div>
@@ -136,14 +159,13 @@
                                                 <div class="form-group">
                                                     <div class="input-group">
                                                         <span class="input-group-addon v-align-t"><i class="fa fa-pencil"></i></span>
-                                                        <textarea name="mensaje" rows="3" class="form-control " required placeholder="Mensaje"></textarea>
+                                                        <textarea name="mensaje" rows="5" class="form-control " required placeholder="Mensaje"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
             
                                             <div class="col-md-12">
-                                                <button name="submit" type="submit" value="Submit" class="site-button  m-r15">Enviar  <i class="fa fa-angle-double-right"></i></button>
-                                                <button name="Resat" type="reset" value="Reset"  class="site-button " >Cancelar  <i class="fa fa-angle-double-right"></i></button>
+                                                <button name="submit" type="submit" value="Submit" class="site-button  m-r15">Enviar mensaje <i class="fa fa-angle-double-right"></i></button>
                                             </div>
             
                                         </div>

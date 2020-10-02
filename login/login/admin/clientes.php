@@ -41,7 +41,7 @@
                         
 						<!-- BEGIN PAGE TITLE & BREADCRUMB-->
 						<h3 class="page-title">
-							Áreas de contacto <small>...</small>
+							Clientes <small>...</small>
 						</h3>
 						<ul class="breadcrumb">
 							<li>
@@ -50,7 +50,7 @@
 								<i class="icon-angle-right"></i>
 							</li>
                             
-							<li><a href="#">Áreas de contacto</a></li>
+							<li><a href="#">Clientes</a></li>
 						</ul>
 						<!-- END PAGE TITLE & BREADCRUMB-->
 					</div>
@@ -62,7 +62,7 @@
 						<!-- BEGIN EXAMPLE TABLE PORTLET-->
 						<div class="portlet box purple">
 							<div class="portlet-title">
-								<div class="caption"><i class="icon-group"></i>Áreas de contacto</div>
+								<div class="caption"><i class="icon-group"></i>Clientes</div>
 								<div class="tools">
 									<a href="javascript:;" class="collapse"></a>
 									<a href="#portlet-config" data-toggle="modal" class="config"></a>
@@ -92,9 +92,8 @@
 									<thead>
 										<tr>
 											<th>Codigo</th>
-                                            <th>Área</th>
-                                            <th>Email</th>
-                                            <th>Teléfono</th>
+                                            <th>Nombre</th>
+                                            <th>Logo</th>
                                             <th>Acciones</th>
 										</tr>
 									</thead>
@@ -105,8 +104,7 @@
 										<tr class="odd gradeX">
 											<td><?=$resultado["cli_id"];?></td>
                                             <td><?=$resultado["cli_nombre"];?></td>
-                                            <td><?=$resultado["cli_email"];?></td>
-                                            <td><?=$resultado["cli_telefono"];?></td>
+                                            <td><?=$resultado["cli_logo"];?></td>
                                             
                                             <td>
                                                 <a href="clientes-info.php?a=2&idR=<?=$resultado["cli_id"];?>"><img src="../../files/iconos/edit.png"></a>

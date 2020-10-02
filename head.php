@@ -1,10 +1,13 @@
-<?php include("login/informacion.php");?>
+<?php 
+require("login/modelo/conexion.php");
+
+$informacionPagina = mysql_fetch_array(mysql_query("SELECT * FROM informacion WHERE info_id=1",$conexion));
+$configuracionPagina = mysql_fetch_array(mysql_query("SELECT * FROM configuracion WHERE conf_id=1",$conexion));
+?>
 <!DOCTYPE html>
 
 <html lang="en">
 
-
-<!-- Mirrored from thewebmax.com/build/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Sep 2020 22:41:22 GMT -->
 <head>
 
 	<!-- META -->
@@ -53,3 +56,30 @@
     <link rel="stylesheet" type="text/css" href="css/custom.css">
     <!-- SIDE SWITCHER STYLE SHEET -->
     <link rel="stylesheet" type="text/css" href="css/switcher.css"> 
+
+
+    <a href="https://api.whatsapp.com/send?phone=<?= $informacionPagina['info_whatsapp']; ?>&text=Hola, estoy en su sitio web, tengo una consulta..." class="float" target="_blank">
+		<i class="fa fa-whatsapp my-float"></i>
+	</a>
+	
+<style type="text/css">
+/*whatsapp*/	
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:60px;
+	right:10px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  	font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  	z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}
+</style>

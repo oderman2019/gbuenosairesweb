@@ -29,7 +29,7 @@
                 <div class="overlay-main bg-black opacity-07"></div>
                 <div class="container">
                     <div class="wt-bnr-inr-entry">
-                        <h1 class="text-white">Portfolio 3</h1>
+                        <h1 class="text-white">Portafolio</h1>
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                         <div class="portfolio-wrap mfp-gallery no-col-gap">
 
                             <?php
-                            $portafolio = mysql_query("SELECT * FROM portafolio", $conexion);
+                            $portafolio = mysql_query("SELECT * FROM portafolio WHERE por_producto IS NULL OR por_producto=''", $conexion);
                             while ($port = mysql_fetch_array($portafolio)) {
                             ?>
 
@@ -54,13 +54,13 @@
                                 <div class="masonry-item cat-1 col-lg-3 col-md-6 col-sm-6">
                                     <div class="wt-box p-a15">
                                         <div class="wt-thum-bx wt-img-effect zoom">
-                                            <img src="images/portfolio/<?=$port['por_imagen'];?>" alt="">
+                                            <img src="login/files/portafolio/<?=$port['por_imagen'];?>" alt="">
                                             <div class="wt-info-has p-a20 bg-white ">
                                                 <div class="wt-info p-b10">
                                                     <h4 class="m-a0"><?=$port['por_nombre'];?></h4>
                                                 </div>
                                                 <div class="wt-info-has-text"><?=$port['por_descripcion'];?></div>
-                                                <a href="javascript:void(0);" class="site-button button-sm ">Contactar <i class="fa fa-angle-double-right"></i></a>
+                                                <a href="contacto.php" class="site-button button-sm ">Contactar <i class="fa fa-angle-double-right"></i></a>
                                             </div>
                                         </div>
                                     </div>

@@ -80,7 +80,10 @@
 									</div>
 								</div>
 								<?php
-								$consulta = mysql_query("SELECT * FROM portafolio WHERE por_producto='".$_GET["producto"]."'",$conexion);
+								$filtro = "por_producto IS NULL OR por_producto=''";
+								if(is_numeric($_GET["producto"])){$filtro ="por_producto='".$_GET["producto"]."'";}
+								$consulta = mysql_query("SELECT * FROM portafolio
+								WHERE $filtro",$conexion);
 								?>
                                 <table class="table table-striped table-bordered table-hover" id="sample_2">
 									<thead>

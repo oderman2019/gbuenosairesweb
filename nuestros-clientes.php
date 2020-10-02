@@ -26,7 +26,7 @@
                     <div class="item">
                         <div class="ow-client-logo">
                             <div class="client-logo wt-img-effect on-color">
-                                <a href="#"><img src="images/client-logo/<?=$cli['cli_imagen'];?>" alt=""></a>
+                                <a href="#"><img src="login/files/cliente/<?=$cli['cli_imagen'];?>" alt=""></a>
                             </div>
                         </div>
                     </div>
