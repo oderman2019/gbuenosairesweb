@@ -104,7 +104,7 @@
 										<tr class="odd gradeX">
 											<td><?=$resultado["cli_id"];?></td>
                                             <td><?=$resultado["cli_nombre"];?></td>
-                                            <td><?=$resultado["cli_logo"];?></td>
+                                            <td> <img src="../../files/cliente/<?=$resultado["cli_imagen"]?>" alt="" /></td>
                                             
                                             <td>
                                                 <a href="clientes-info.php?a=2&idR=<?=$resultado["cli_id"];?>"><img src="../../files/iconos/edit.png"></a>

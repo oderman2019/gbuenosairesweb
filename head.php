@@ -3,7 +3,10 @@ require("login/modelo/conexion.php");
 
 $informacionPagina = mysql_fetch_array(mysql_query("SELECT * FROM informacion WHERE info_id=1",$conexion));
 $configuracionPagina = mysql_fetch_array(mysql_query("SELECT * FROM configuracion WHERE conf_id=1",$conexion));
+
+$home = mysql_fetch_array(mysql_query("SELECT * FROM paginas WHERE pag_id=1 AND pag_activa=1",$conexion));
 ?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -19,8 +22,8 @@ $configuracionPagina = mysql_fetch_array(mysql_query("SELECT * FROM configuracio
     <meta name="description" content="" />
     
     <!-- FAVICONS ICON -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+    <link rel="icon" href="login/files/logo/logo.jpeg" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" href="login/files/logo/logo.jpeg" />
     
     
     

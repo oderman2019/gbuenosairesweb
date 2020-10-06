@@ -580,12 +580,12 @@ if ($_POST["id"] == 29) {
 //CREAR CLIENTES
 if ($_POST["id"] == 30) {
 	//IMAGENES
-	/*
-$archivo= $_FILES['imagen']['tmp_name']; 
-$nombre= $_FILES['imagen']['name'];
-$destino="../../files/cliente/";
-move_uploaded_file($archivo, $destino ."/".$nombre);*/
-	mysql_query("INSERT INTO clientes(cli_nombre, cli_email, cli_telefono)VALUES('" . $_POST["nombre"] . "','" . $_POST["email"] . "','" . $_POST["telefono"] . "')", $conexion);
+	if ($_FILES['logo']['name'] != "") {
+		$logo = $_FILES['logo']['name'];
+		$destino = "../../files/cliente/";
+		move_uploaded_file($_FILES['logo']['tmp_name'], $destino . "/" . $logo);
+	} 
+	mysql_query("INSERT INTO clientes(cli_nombre, cli_imagen)VALUES('" . $_POST["nombre"] . "','" . $logo . "')", $conexion);
 	if (mysql_errno() != 0) {
 		echo mysql_error();
 		exit();
@@ -595,7 +595,18 @@ move_uploaded_file($archivo, $destino ."/".$nombre);*/
 }
 //EDITAR CLIENTES
 if ($_POST["id"] == 31) {
-	mysql_query("UPDATE clientes SET cli_nombre='" . $_POST["nombre"] . "', cli_email='" . $_POST["email"] . "', cli_telefono='" . $_POST["telefono"] . "'  WHERE cli_id ='" . $_POST["idR"] . "'", $conexion);
+	if ($_FILES['logo']['name'] != "") {
+		$logo = $_FILES['logo']['name'];
+		$destino = "../../files/cliente/";
+		move_uploaded_file($_FILES['logo']['tmp_name'], $destino . "/" . $logo);
+		mysql_query("UPDATE clientes SET cli_imagen='" . $logo . "' WHERE cli_id ='" . $_POST["idR"] . "'", $conexion);
+	if (mysql_errno() != 0) {
+		echo mysql_error();
+		exit();
+	}
+	} 
+
+	mysql_query("UPDATE clientes SET cli_nombre='" . $_POST["nombre"] . "'  WHERE cli_id ='" . $_POST["idR"] . "'", $conexion);
 	if (mysql_errno() != 0) {
 		echo mysql_error();
 		exit();

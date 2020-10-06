@@ -51,7 +51,7 @@
                         <?php include("panel-color.php");?> 
                         
 						<h3 class="page-title">
-							Áresa de contacto
+							Clientes
 						</h3>
 						<ul class="breadcrumb">
 							<li>
@@ -60,7 +60,7 @@
 								<span class="icon-angle-right"></span>
 							</li>
 							<li>
-								<a href="clientes.php">Áresa de contacto</a>
+								<a href="clientes.php">Clientes</a>
 								<span class="icon-angle-right"></span>
 							</li>
 							<li><a href="#">Informaci&oacute;n</a></li>
@@ -102,23 +102,34 @@
 
                                     
                                     <div class="control-group">
-										<label class="control-label">Área</label>
+										<label class="control-label">Nombre</label>
 										<div class="controls">
 											<input class="span12 m-wrap" name="nombre" value="<?=$resultado["cli_nombre"];?>">
 										</div>
 									</div>
 									
 									<div class="control-group">
-										<label class="control-label">Email</label>
+										<label class="control-label">Logo<br>
+                                        Medidas:(144 x 79) - Peso: (1 MB M&aacute;ximo)</label>
 										<div class="controls">
-											<input class="span12 m-wrap" name="email" value="<?=$resultado["cli_email"];?>">
-										</div>
-									</div>
-									
-									<div class="control-group">
-										<label class="control-label">Teléfono</label>
-										<div class="controls">
-											<input class="span12 m-wrap" name="telefono" value="<?=$resultado["cli_telefono"];?>">
+											<div class="fileupload fileupload-new" data-provides="fileupload">
+												<div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
+                                                <?php if($resultado["cli_imagen"]!=""){?>
+                                                <img src="../../files/cliente/<?=$resultado["cli_imagen"]?>" alt="" />
+												<?php }else{?>
+													<img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=Ninguna+imagen" alt="" />
+												<?php }?>
+                                                </div>
+												<div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+												<div>
+													<span class="btn btn-file"><span class="fileupload-new">Select image</span>
+													<span class="fileupload-exists">Change</span>
+													<input type="file" class="default" name="logo" /></span>
+													<a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+												</div>
+											</div>
+											
+											
 										</div>
 									</div>
 									

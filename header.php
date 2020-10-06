@@ -1,3 +1,4 @@
+
 <header class="site-header header-style-1 ">
 
     <div class="top-bar bg-secondry">
@@ -27,7 +28,7 @@
             <div class="container">
                 <div class="logo-header">
                     <a href="index.php">
-                        <img src="images/logo-dark.png" width="171" height="49" alt="" />
+                        <img src="login/files/logo/logo.jpeg" width="171" height="49" alt="" />
                     </a>
                 </div>
                 <!-- NAV Toggle Button -->

@@ -108,7 +108,7 @@
 
 									<div class="control-group">
 										<label class="control-label">Imagen<br>
-											Peso: (2 MB M&aacute;ximo)</label>
+										Medidas:(1000 X 600) - Peso: (1 MB M&aacute;ximo)</label>
 										<div class="controls">
 											<div class="fileupload fileupload-new" data-provides="fileupload">
 												<div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">

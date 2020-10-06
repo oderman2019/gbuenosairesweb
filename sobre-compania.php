@@ -1,6 +1,3 @@
-<?php
-$home = mysql_fetch_array(mysql_query("SELECT * FROM paginas WHERE pag_id=1 AND pag_activa=1",$conexion));
-?> 
 
 <div class="section-full p-tb100 bg-gray">
     <div class="container">
